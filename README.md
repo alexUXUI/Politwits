@@ -13,8 +13,8 @@ What Politicians Say VS. How Politicians Vote
 
 ## To Delpoy this app:
 ```
-1. Forck and CLone this repositroy
+1. Fork and Clone this repository
 2. Open the directory
-3. Double-click on the index.html
+3. Double-click on the index.html file
 ```
 > MIT license
