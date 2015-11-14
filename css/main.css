@@ -1,0 +1,26 @@
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+
+/*.results{
+  width: 100%;
+}*/
+
+.tweetz {
+  display: flex;
+  background-color: rgb(244,244,244);
+  height:100%;;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.results .tweetz .tweet {
+  list-style: none;
+  border-style: 2px black;
+  flex-direction: row;
+  width: 30%;
+  padding: 25px;
+}
