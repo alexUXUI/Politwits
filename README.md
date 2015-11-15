@@ -20,4 +20,5 @@
 3. No API keys required!
 ```
 > License: MIT
+
 > Author: Alex Bennett, CJ 
