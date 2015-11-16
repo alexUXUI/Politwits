@@ -16,7 +16,7 @@
 ##### To deploy this app:
 ```
 1. Fork and download this repository
-2. Double-click the inde.html file
+2. Double-click the index.html file
 3. No API keys required!
 ```
 > License: MIT
