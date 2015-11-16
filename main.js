@@ -39,15 +39,23 @@ function factCheck(){
        console.log(data);
        var individualStats = [];
        var titles = [];
+
        for(var i=0 in data.objects){
+         //get data points individually
          var sort = data.objects[i].sortname;
          var bioGuide = data.objects[i].bioguideid;
          var birthday = data.objects[i].birthday;
          var twitter = data.objects[i].twitterid;
          var youtube = data.objects[i].youtubeid;
          var link = data.objects[i].link;
+         //put data points into an object
+         var politcian = {};
+         politcian.tweeter = data.objects[i].twitterid;
+         politcian.bio = data.objects[i].bioguideid;
+         politcian.nombre = data.objects[i].sortname;
+         politcian.bday = data.objects[i].birthday;
+         console.log(politcian);
          //create a person array
-         // create a person object!
          individualStats.push(sort, bioGuide, birthday, twitter, youtube);
           // console.log(individualStats);
           //  var j ;
@@ -55,26 +63,71 @@ function factCheck(){
           //    console.log('whats good');
           //  }
            if(twitter != undefined ){
-             $('.results').append(
-              "<div class='flexer'><h3>" + sort + "<h3>" +
-              "<h4>" +  bioGuide + "</h4>" +
-              "<h5>" + birthday + "</h5>" +
-              "<h6>" + twitter + "<br>" + youtube + "<br>" + link + "</h6></div>"
+             $('.tweetz').append(
+              "<div class='flexer'><h4>" + sort + "</h4>" +
+              "<p data-id="+ bioGuide+ " >" +  bioGuide + "</p>" +
+              "<p data-id="">" + birthday + "</p>" +
+              "<p>" + twitter + "<br>" + youtube + "</p>" +
+              "<button data-bioguide=\"" +bioGuide + "\" onclick='voteHistory()'>vote history</button>" + "<br />" +
+               "<button onclick='newPage()'>visit profile</button>" + "<br />" +
+               "<button onclick='getTweets()'>twitter</button></div>"
              )
            } else {
-             $('.results').append(
-               "<div class='flexer'><h3>" + sort + "<h3>" +
-               "<h4>" +  bioGuide + "</h4>" +
-               "<h5>" + birthday + "</h5>" +
-               "<h6>" + twitter + "<br>" + youtube + "<br>" + link +"</h6></div>"
+             $('.tweetz').append(
+               "<div class='flexer'><h4>" + sort + "</h4>" +
+               "<p>" +  bioGuide + "</p>" +
+               "<p>" + birthday + "</p>" +
+               "<p>" + twitter + "<br>" +
+               youtube + "</p>" +
+               "<button onclick='voteHistory()'>vote history</button>" + "<br/>" +
+               "<button onclick='newPage()'>visit profile</button>" + "<br />" +
+               "<button onclick='getTweets()'>twitter</button></div>"
              )
            }
          }
-
        }
      }).done(function(){
        console.log('done 1')
        // could pass getTweets() here, too
+     }).done(function(){
+       console.log('done 2')
      });
    }
   //  factCheck();
+
+  // get voting history
+  function voteHistory(){
+    var voteURL = 'https://www.govtrack.us/api/v2/vote_voter/?person=400222;'
+      $.ajax({
+           dataType: "json",
+           url: voteURL,
+           cache: true,
+           success: function(data){
+             console.log(data);
+             for(var i=0 in data.objects){
+               var issue = data.objects[i].vote.question;
+               console.log(issue);
+             }
+           }
+    }).done(function(){
+      console.log('Donezo!');
+    });
+  }
+
+  // voteHistory();
+
+  // navabr behavior
+
+  $(window).scroll(
+    {
+        previousTop: 0
+    },
+    function () {
+    var currentTop = $(window).scrollTop();
+    if (currentTop < this.previousTop) {
+        $(".header").fadeIn(300);
+    } else {
+        $(".header").fadeOut(300);
+    }
+    this.previousTop = currentTop;
+});
