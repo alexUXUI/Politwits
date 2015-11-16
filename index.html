@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,16 +16,25 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="css/main.css">
-    <title>Tweeter</title>
+    <title>Say What?!</title>
   </head>
   <body>
+    <!-- nav -->
+
+    <div class="header">
+
+        <input type="text" id="twitterBox" placeholder="twitter"> </input>
+        <input type="text" id="searchBox" placeholder="politician"> </input>
+          <br />
+        <button id="twitter-btn" onclick="getTweets()">Get Tweets</button>
+       <button id="politician-btn" onclick="factCheck()">Get Politicians</button>
+	</div>
+
     <!-- <h1> Sanity check!</h1> -->
-    <input type="text" id="twitterBox" placeholder="twitter"> </input>
-    <input type="text" id="searchBox" placeholder="politician"> </input>
+
     <div class="results">
       <ul class="tweetz"></ul>
     </div>
-<button id="twitter-btn" onclick="getTweets()">Get Tweets</button>
-   <button id="politician-btn" onclick="factCheck()">Get Politicians</button>
+
   </body>
 </html>
