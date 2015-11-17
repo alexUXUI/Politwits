@@ -21,4 +21,6 @@
 ```
 > License: MIT
 
-> Author: Alex Bennett, CJ 
+> Author: Alex Bennett
+
+> Contributors: CJ, Danny, Mike, Dave
