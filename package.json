@@ -1,0 +1,24 @@
+{
+  "name": "saywhat",
+  "version": "1.0.0",
+  "description": "saywhat",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "firebase": "^2.3.1",
+    "codebird": "^2.6.0",
+    "govtrack-node": "^0.2.0",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alex Bennett",
+  "license": "MIT"
+}
