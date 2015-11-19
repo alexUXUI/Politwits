@@ -1,2 +1,103 @@
-h2 {
-  color: tomato; }
+// Resets
+body {
+  margin: 0;
+  padding: 0;
+}
+
+// Search styling for splash page;
+.inputWrap {
+  margin: 0 auto;
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  display: flex; /* or inline-flex */
+}
+.searchBox {
+  margin: 0 auto;
+  text-align: center;
+  height: 3em;
+  background-color: white;
+  color: black;
+  width: 70%;
+  font-family: "Verdana";
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+}
+.initSearch {
+  margin: 0 auto;
+  width: 30%;
+  height: 3.5em;
+  background-color:white;
+  flex-direction: row;
+}
+// Hero spot styling
+.hero {
+  width:25%;
+  height: 400px;
+  background-color: #ccc;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+.brand {
+  height:100%;
+  width:100%;
+  background-color: white;
+  border-radius: 50%;
+}
+// results styling
+
+.results{
+  width: 100%;
+  margin-top: 150px;
+}
+
+.tweetz {
+  display: flex;
+  background-color: rgb(244,244,244);
+  height:100%;;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: white;
+}
+.results .tweetz .tweet {
+  list-style: none;
+  border-style: 2px black;
+  flex-direction: row;
+  width: 30%;
+  padding: 25px;
+}
+.results .flexer {
+  border-style: 2px black;
+  flex-direction: row;
+  width: 30%;
+  padding: 25px;
+}
+
+.politicianWrapper {
+  width:450px;
+  height: 600px;
+  background-color: white;
+  position: relative;
+}
+
+.politicianWrapper:hover {
+  width:450px;
+  height: 500px;
+  background-color: white;
+  position: relative;
+  opacity: 0.4;
+}
+
+.figure {
+  z-index: 999;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  width:100%;
+}
+
+.polIMG {
+  z-index: -1;
+}

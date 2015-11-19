@@ -5,13 +5,13 @@ var poly = localStorage.getItem('politician');
 var pol = localStorage.getItem(pageProfile);
 var populateInfo = JSON.parse(pol);
 var voterId = populateInfo.votes;
-
 $(document).ready(function(){
   var polHeader = document.querySelector('#polName');
   polHeader.innerHTML = populateInfo.nombre;
+  $('.twitDesc').html('description');
   $(".heroImg").attr("src",'https://theunitedstates.io/images/congress/450x550/' + pageProfile + '.jpg');
   getTweets();
-  console.log('conected')
+  console.log('conected');
 })
 
 ////////////////
@@ -29,7 +29,7 @@ function voteHistory(){
              var question = data.objects[i].vote.question;
              var required = data.objects[i].vote.required;
              var tally = data.objects[i].vote.result;
-             $('.tweetz').append(
+             $('.voteHist').append(
               "<div class=''>" +
               "<p>" + yeaNay + "</p>" +
               "<p>" + chamber + "</p>" +

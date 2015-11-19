@@ -1,10 +1,107 @@
+#heroimg {
+  height: 500px;
+  width: 450px;
+  background-color: black;
+  color: red;
+  position: relative;
+}
+
 .polNombre {
   color: black;
-  font-size: 3em;
+  font-size: 1em;
   font-family: "Verdana";
 }
 
+.profHead {
+  height: 350px;
+  width: 100%;
+  background-color: tomato;
+  position: relative;
+  z-index: 1;
+}
 
-.say-what {
-  background-color: red;
+.heroImg {
+  position: absolute;
+  z-index: 999;
+  margin-top: 150px;
+  margin-left: 5%;
+  border-width: 10px;
+  border-color: #ffffff;
+  border-style: solid;
+  height: 350px;
+  width: 300px;
+
+}
+
+.profHead .homeLink {
+  font-family: "Verdana";
+  font-size: 3em;
+  color: tomato;
+  background-color: #a7a7a7;
+  width: 100%;
+  height: 4em;
+  margin-bototm: 150px;
+}
+
+#tweetMediaWrapper {
+  display: flex;
+  width: 65%;
+  background-color: yellow;
+  height: 320px;
+  margin-right: 10%;
+  margin-left: 25%;
+}
+
+.tweetMedia {
+  flex-direction: row;
+  height: 300px;
+  width: 300px;
+  background-color: pink;
+  margin:10px;
+}
+
+#more-info {
+  font-family: "Verdana";
+  color: #a7a7a7;
+  position: absolute;
+  margin-left: 5%;
+  background-color: #efefef;
+  margin-top: -200px;
+  width: 300px;
+  border-width: 10px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+.twitDesc {
+  font-family: "Verdana";
+  color: #fff;
+  font-size: 2em;
+  padding-top: 120px;
+  margin-left: 50%;
+}
+
+.timeline {
+  width: 65%;
+  background-color: purple;
+  margin-right: 5%;
+  display: flex;
+  margin-left: 25%;
+
+}
+
+.timeline .results {
+  flex-direction: column;
+  background-color: orange;
+  width: 50%;
+  margin: 2%;
+  height: 100%;
+}
+
+.timeline .votesYo {
+  flex-direction: column;
+  background-color: blue;
+  width: 50%;
+  margin: 2%;
+  height: 100%;
 }
