@@ -5,15 +5,15 @@ var poly = localStorage.getItem('politician');
 var pol = localStorage.getItem(pageProfile);
 var populateInfo = JSON.parse(pol);
 var voterId = populateInfo.votes;
+var refreshTweets = localStorage.getItem('twitObj');
+
 $(document).ready(function(){
   var polHeader = document.querySelector('#polName');
   polHeader.innerHTML = populateInfo.nombre;
-  $('.twitDesc').html('description');
   $(".heroImg").attr("src",'https://theunitedstates.io/images/congress/450x550/' + pageProfile + '.jpg');
   getTweets();
   console.log('conected');
 })
-
 ////////////////
 function voteHistory(){
   var voteURL = 'https://www.govtrack.us/api/v2/vote_voter/?person='+ voterId;

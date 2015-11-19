@@ -33,7 +33,7 @@ function factCheck(){
          politicians.push(politician);
          // if theres an images
 
-         var $tweet = $( "<div class='politicianWrapper'>" +
+         var $poly = $( "<div class='politicianWrapper'>" +
                      "<img src='null_politician.png' class='nullPol'/>" +
                      "<div class='figure'>" +
                        "<h2 class='sort'>" + sort + "</h2>" +
@@ -44,8 +44,8 @@ function factCheck(){
          var imageString = "https://theunitedstates.io/images/congress/450x550/" + bioGuide + ".jpg";
          var newImage = new Image();
          newImage.addEventListener('load', function (e) {
-           $tweet.find(".nullPol").remove()
-           $tweet.prepend(newImage);
+           $poly.find(".nullPol").remove()
+           $poly.prepend(newImage);
           //  console.log('loaded!');
          })
          newImage.addEventListener('error', function (e) {
@@ -53,7 +53,7 @@ function factCheck(){
          })
          newImage.src = imageString;
          $('.tweetz').append(
-           $tweet
+           $poly
          )
          // Append the info recieved from request
               // cache politician objects in local storage
@@ -106,6 +106,7 @@ function getTweets(){
           console.log(data);
           // var $result = $('#results');
           var firstTweet;
+          var tweetsForDays = [];
           for(i = 0; i < data.length; i = i + 1){
             var tweet = data[i];
             var writing = data[i].text;
@@ -115,6 +116,22 @@ function getTweets(){
             var description = data[i].user.description;
             var hashtag = data[i].entities.hashtags[0];
             var tweetImg = data[i].entities.media;
+            var tweetId = data[i].id;
+
+            var twitObj = {};
+            twitObj.writing = data[i].text;
+            twitObj.favorite = data[i].favorite_count;
+            twitObj.retweet = data[i].retweet_count;
+            twitObj.description = data[i].user.description;
+            twitObj.hashtag = data[i].entities.hashtags[0];
+            twitObj.tweetImg = data[i].entities.media;
+            twitObj.id = data[i].id;
+
+            tweetsForDays.push(twitObj);
+
+            var storeTwitObj = localStorage.setItem(tweetId, JSON.stringify(twitObj));
+            var getTwitObj = localStorage.getItem('twitObj');
+            console.log('got tweet: ', JSON.parse(getTwitObj));
 
             if(typeof tweet.entities.media != 'undefined') {
               tweet.entities.media.forEach(function(media){
@@ -129,6 +146,11 @@ function getTweets(){
               "<li class='tweet'>"+ writing + favorite + " # " + hashtag + "</li>"
             )
           }
+
+          var eachTweet = localStorage.getItem(tweetId);
+          var populateTweets = JSON.parse(eachTweet);
+          var tweetInfo = populateTweets.description;
+          $('.twitDesc').html(tweetInfo);
           console.log(firstTweet);
       },
       true // this parameter required

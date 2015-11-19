@@ -5,21 +5,18 @@
   color: red;
   position: relative;
 }
-
 .polNombre {
   color: black;
   font-size: 1em;
   font-family: "Verdana";
 }
-
 .profHead {
   height: 350px;
   width: 100%;
-  background-color: tomato;
+  background-color: #ccc;
   position: relative;
   z-index: 1;
 }
-
 .heroImg {
   position: absolute;
   z-index: 999;
@@ -30,9 +27,7 @@
   border-style: solid;
   height: 350px;
   width: 300px;
-
 }
-
 .profHead .homeLink {
   font-family: "Verdana";
   font-size: 3em;
@@ -42,21 +37,19 @@
   height: 4em;
   margin-bototm: 150px;
 }
-
 #tweetMediaWrapper {
   display: flex;
   width: 65%;
-  background-color: yellow;
+  background-color: white;
   height: 320px;
   margin-right: 10%;
   margin-left: 25%;
 }
-
 .tweetMedia {
   flex-direction: row;
   height: 300px;
   width: 300px;
-  background-color: pink;
+  background-color: #ccc;
   margin:10px;
 }
 
@@ -72,36 +65,34 @@
   border-color: #ffffff;
   border-style: solid;
 }
-
 .twitDesc {
   font-family: "Verdana";
   color: #fff;
   font-size: 2em;
-  padding-top: 120px;
-  margin-left: 50%;
+  padding-top: 150px;
+  margin-left: 26%;
 }
-
 .timeline {
   width: 65%;
-  background-color: purple;
+  background-color: #fefefe;
   margin-right: 5%;
   display: flex;
   margin-left: 25%;
-
+  height: 2000px;
 }
-
-.timeline .results {
+.results {
   flex-direction: column;
-  background-color: orange;
+  background-color: white;
   width: 50%;
   margin: 2%;
-  height: 100%;
+  height: 1800px;
+  overflow: scroll;
 }
-
-.timeline .votesYo {
+.votesYo {
   flex-direction: column;
-  background-color: blue;
+  background-color: white;
   width: 50%;
   margin: 2%;
-  height: 100%;
+  height: 1800px;
+  overflow: scroll;
 }
