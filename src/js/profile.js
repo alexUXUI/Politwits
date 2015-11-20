@@ -31,7 +31,8 @@ function voteHistory(){
              var tally = data.objects[i].vote.result;
              $('.voteHist').append(
               "<div class='voteUp'>" +
-              "<p>" + yeaNay + chamber + question + required +  tally + "</p>" +
+              "<h3>" + yeaNay + "</h3>" + "<p>" +
+              chamber + question + required +  tally + "</p>" +
               "</div>"
              )
            }

@@ -39,11 +39,11 @@
 }
 #tweetMediaWrapper {
   display: flex;
-  width: 65%;
+  width: 800px;
   background-color: white;
   height: 320px;
   margin-right: 10%;
-  margin-left: 25%;
+  margin-left: 30%;
 }
 .tweetMedia {
   flex-direction: row;
@@ -85,7 +85,7 @@
 }
 .results {
   flex-direction: column;
-  background-color: white;
+  background-color: #fefefe;
   width: 50%;
   margin: 2%;
   height: 1800px;
@@ -105,5 +105,33 @@
   font-family: "Verdana";
   font-size: 1.5em;
   color: #a7a7a7;
-  margin-bottom: 100px;
+}
+
+.elTweet {
+  background-color: #fff;
+}
+
+hr {
+  color:red;
+  width: 80%;
+  text-align: right;
+  margin-left: 75px;
+}
+
+.tweet {
+  font-family: "Helvetica";
+  font-size: 1.3em;
+}
+
+.voteUp {
+  font-family: "Helvetica";
+  font-size: 1.3em;
+}
+
+.results h3 {
+  
+}
+
+.votes h3 {
+
 }

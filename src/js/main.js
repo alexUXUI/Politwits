@@ -115,6 +115,7 @@ function getTweets(){
             var hashtag = data[i].entities.hashtags[0];
             var tweetImg = data[i].entities.media;
             var tweetId = data[i].id;
+            var profPic = data[i].user.profile_image_url_https;
             // create obj
             var twitObj = {};
             // push properties to object
@@ -125,6 +126,8 @@ function getTweets(){
             twitObj.hashtag = data[i].entities.hashtags[0];
             twitObj.tweetImg = data[i].entities.media;
             twitObj.id = data[i].id;
+            twitObj.profPic = data[i].user.profile_image_url_https;
+            // console.log(profPic);
             // push onject to array
             tweetsForDays.push(twitObj);
             // store the results
@@ -136,39 +139,33 @@ function getTweets(){
 
                 var tweetImg = data[i].entities.media[0].media_url_https;
                 tweetImg.toString();
-                console.log(tweetImg);
+                // console.log(tweetImg);
                 var eachTweet = localStorage.getItem(tweetId);
                 var populateTweets = JSON.parse(eachTweet);
                 var tweetInfo = populateTweets.description;
                 $('.twitDesc').html(tweetInfo);
-
-                var index = 0;
-                for(index = 0; index < 1; index = index + 1){
-                  $('.tweetMedia').prepend('<img id="twert" src=' + tweetImg + '/>')
-                }
-
               })
 
             } else {
-              console.log('else');
+              // console.log('else');
             }
             $('.tweetz').append(
-              "<li class='tweet'>"+ writing + favorite + " # " + hashtag + tweetImg + "</li>"
+              "<div class='elTweet'>" +
+              "<img class='pofile' src='" + profPic + "'/>" + "<hr class='imgBreak'>" +
+              "<li class='tweet'>"+ writing + favorite + "</li>" +
+              "<div class='tweetFoot'>" + "<p> favorites: " + favorite + " Retweets: " + retweet + "</p>" +
+              "</div>" +
+              "<br>" +
+              "</div>"
             )
+          }
+          var index = 0;
+          for(index = 0; index < 1; index = index + 1){
+            $('.tweetMedia').prepend("<img src='" + tweetImg + "'/>");
           }
 
 
-          // console.log(firstTweet);
-          // for (var i = 0; i < tweet.entities.media.length; i = i + 1){
-          //   var images = tweet.entities.media[i];
-          //   console.log('in the image loop!');
-          // }
       },
       true // this parameter required
   );
 }
-// getTweets();
-// var searchBtn = document.querySelector("#politician-btn");
-// searchBtn.addEventListener('click', function(){
-//   $(".hero").fadeOut(300);
-// })
