@@ -68,9 +68,12 @@
 .twitDesc {
   font-family: "Verdana";
   color: #fff;
-  font-size: 2em;
-  padding-top: 150px;
+  font-size: 1.5em;
+  padding-top: 200px;
   margin-left: 26%;
+  width: 800px;
+  line-height: 1.5em;
+  font-weight: regular;
 }
 .timeline {
   width: 65%;
@@ -95,4 +98,12 @@
   margin: 2%;
   height: 1800px;
   overflow: scroll;
+}
+
+.timeLineHone {
+  margin-left: 45%;
+  font-family: "Verdana";
+  font-size: 1.5em;
+  color: #a7a7a7;
+  margin-bottom: 100px;
 }

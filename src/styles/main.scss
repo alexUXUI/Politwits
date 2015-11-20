@@ -54,7 +54,7 @@ body {
 .tweetz {
   display: flex;
   background-color: rgb(244,244,244);
-  height:100%;;
+  height:100%;
   width: 100%;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -64,12 +64,12 @@ body {
   list-style: none;
   border-style: 2px black;
   flex-direction: row;
-  width: 30%;
+  width: 100%;
   padding: 25px;
 }
 .results .flexer {
   border-style: 2px black;
-  flex-direction: row;
+  flex-direction: column;
   width: 30%;
   padding: 25px;
 }

@@ -6,7 +6,7 @@ var pol = localStorage.getItem(pageProfile);
 var populateInfo = JSON.parse(pol);
 var voterId = populateInfo.votes;
 var refreshTweets = localStorage.getItem('twitObj');
-
+/////
 $(document).ready(function(){
   var polHeader = document.querySelector('#polName');
   polHeader.innerHTML = populateInfo.nombre;
@@ -30,12 +30,8 @@ function voteHistory(){
              var required = data.objects[i].vote.required;
              var tally = data.objects[i].vote.result;
              $('.voteHist').append(
-              "<div class=''>" +
-              "<p>" + yeaNay + "</p>" +
-              "<p>" + chamber + "</p>" +
-              "<p>" + question + "</p>" +
-              "<p>" + required + "</p>" +
-              "<p>" + tally + "</p>" +
+              "<div class='voteUp'>" +
+              "<p>" + yeaNay + chamber + question + required +  tally + "</p>" +
               "</div>"
              )
            }
