@@ -1,5 +1,5 @@
 # Politwits
-The app that allows you to see the twitter timeline and vioting history of US Congressional members.
+See the Twitter timeline and voting history of US Congressional members.
 
 ####To deploy this app locally!
 ```
@@ -18,7 +18,7 @@ The app that allows you to see the twitter timeline and vioting history of US Co
 ####Check it out Live
 https://blistering-heat-2054.firebaseapp.com/
 
-###See the Demo:
+#####See the Demo:
 https://s3-us-west-2.amazonaws.com/politwits/Politwits_Product_Demo.mov
 
 > MIT Licesnce
