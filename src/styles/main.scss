@@ -11,24 +11,72 @@ body {
   height: 100%;
   background-color: white;
   display: flex; /* or inline-flex */
+  margin-top: 30px;
 }
 .searchBox {
   margin: 0 auto;
-  text-align: center;
-  height: 3em;
+  border: none;
+  height: 85px;
   background-color: white;
   color: black;
   width: 70%;
-  font-family: "Verdana";
   display: flex; /* or inline-flex */
   flex-direction: row;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  border-bottom: solid black 4px;
+}
+.searchBox:hover {
+  margin: 0 auto;
+  border: none;
+  height: 85px;
+  background-color: white;
+  color: black;
+  width: 70%;
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  border-bottom: solid black 4px;
+}
+.searchBox:focus {
+  margin: 0 auto;
+  color:white;
+  border: none;
+  height: 85px;
+  color: white;
+  background-color: white;
+  color: black;
+  width: 70%;
+  display: flex; /* or inline-flex */
+  flex-direction: row;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Carrois Gothic SC', sans-serif;
+  border-bottom: solid black 4px;
 }
 .initSearch {
   margin: 0 auto;
   width: 30%;
-  height: 3.5em;
+  height: 90px;
   background-color:white;
   flex-direction: row;
+  border: none;
+  font-size: 1.5em;
+
+}
+.initSearch:hover {
+  margin: 0 auto;
+  width: 30%;
+  height: 90px;
+  background-color:#424242;
+  color: white;
+  flex-direction: row;
+  border: none;
+  font-size: 1.5em;
+
 }
 // Hero spot styling
 .hero {
@@ -100,4 +148,11 @@ body {
 
 .polIMG {
   z-index: -1;
+}
+
+.call-to-action {
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Helvetica";
+  margin-top: 50px;
 }
