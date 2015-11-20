@@ -1,7 +1,7 @@
 # Politwits
 See the Twitter timeline and voting history of US Congressional members.
 
-####To Deploy Locally:
+####Local Deployment:
 ```
 1. Fork and Clone this Repository
 2. Open up the directory
