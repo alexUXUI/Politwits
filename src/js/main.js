@@ -28,20 +28,24 @@ function factCheck(){
          politician.nombre = data.objects[i].sortname;
          politician.bday = data.objects[i].birthday;
          politician.votes = data.objects[i].id;
+         politician.youtube = data.objects[i].youtubeid;
+         politician.link = data.objects[i].link;
          politicians.push(politician);
          // if theres an image
          var $poly = $( "<div class='politicianWrapper'>" +
-                     "<img src='null_politician.png' class='nullPol'/>" +
-                     "<div class='figure'>" +
-                       "<h2 class='sort'>" + sort + "</h2>" +
-                       "<a href='/politician.html#" + bioGuide + "'> visit profile!</a>" +
-                     "</div>" +
+         "<a href='/politician.html#" + bioGuide + "' class='clickThru'><i style='color:#dddddd;'class='fa fa-chevron-right'></i></a>" +
+         "<img src='null_img.png' class='nullPol'/>" +
+                      "<div class='inner'>" +
+                          "<h2 class='sort'>" + sort + "</h2>" +
+                         "</div>" +
+                         "<div class='figure'>" +
+                       "</div>" +
                    "</div>");
          var imageString = "https://theunitedstates.io/images/congress/450x550/" + bioGuide + ".jpg";
          var newImage = new Image();
          newImage.addEventListener('load', function (e) {
            $poly.find(".nullPol").remove()
-           $poly.prepend(newImage);
+           $poly.append(newImage);
           //  console.log('loaded!');
          })
          newImage.addEventListener('error', function (e) {
@@ -153,7 +157,7 @@ function getTweets(){
               "<div class='elTweet'>" +
               "<img class='pofile' src='" + profPic + "'/>" + "<hr class='imgBreak'>" +
               "<li class='tweet'>"+ writing + favorite + "</li>" +
-              "<div class='tweetFoot'>" + "<p> favorites: " + favorite + " Retweets: " + retweet + "</p>" +
+              "<div class='tweetFoot'>" + "<p> favorites: " + favorite + " Retweets: <i class='fa fa-retweet'></i>" + retweet + "</p>" +
               "</div>" +
               "<br>" +
               "</div>"
@@ -161,10 +165,8 @@ function getTweets(){
           }
           var index = 0;
           for(index = 0; index < 1; index = index + 1){
-            $('.tweetMedia').prepend("<img src='" + tweetImg + "'/>");
+            $('.tweetMedia').append("<img src='" + tweetImg + "'/>");
           }
-
-
       },
       true // this parameter required
   );

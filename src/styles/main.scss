@@ -24,7 +24,9 @@ body {
   flex-direction: row;
   font-size: 1.5em;
   text-align: center;
-  font-family: 'Carrois Gothic SC', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
   border-bottom: solid black 4px;
 }
 .searchBox:hover {
@@ -80,9 +82,9 @@ body {
 }
 // Hero spot styling
 .hero {
-  width:25%;
-  height: 400px;
-  background-color: #ccc;
+  width:500px;
+  height: 500px;
+  background-color: #fff;
   margin: 0 auto;
   margin-top: 5%;
 }
@@ -124,35 +126,90 @@ body {
 
 .politicianWrapper {
   width:450px;
-  height: 600px;
-  background-color: white;
+  height: 550px;
   position: relative;
 }
 
-.politicianWrapper:hover {
-  width:450px;
-  height: 500px;
-  background-color: white;
-  position: relative;
-  opacity: 0.4;
-}
+// .politicianWrapper:hover {
+//   width:450px;
+//   height: 550px;
+//   background-color: white;
+//   position: relative;
+//   opacity: 0.1;
+// }
 
-.figure {
-  z-index: 999;
-  background-color: black;
-  color: white;
-  position: absolute;
-  bottom: 0px;
-  width:100%;
-}
+// .figure {
+//   z-index: 999;
+//   background-color: black;
+//   color: white;
+//   position: absolute;
+//   bottom: 0px;
+//   width:450px;
+//   height:500px;
+//   opacity: 0.0;
+// }
+//
+// .figure:hover {
+//   z-index: 999;
+//   background-color: black;
+//   color: white;
+//   position: absolute;
+//   bottom: 0px;
+//   width:450px;
+//   height:500px;
+//   opacity: 0.8;
+// }
 
 .polIMG {
   z-index: -1;
 }
-
 .call-to-action {
   text-align: center;
   margin: 0 auto;
-  font-family: "Helvetica";
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+  font-weight: 300;
   margin-top: 50px;
+}
+.inner {
+  height: 550px;
+  width: 450px;
+  opacity: 0.0;
+  background-color:hsla(0, 0%, 100%, 0.0);
+  position: absolute;
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+.inner:hover {
+  height: 550px;
+  width: 450px;
+  opacity: 1;
+  position: absolute;
+  background-color:hsla(0, 0%, 100%, 0.7);
+  color:black;
+  font-family: 'Oswald', sans-serif;
+  font-style: 2em;
+}
+.sort {
+  font-size: 2em;
+  color: black;
+  margin-top: 10%;
+  position: absolute;
+  text-align: center;
+}
+.clickThru {
+  font-size: 1.5em;
+  color: black;
+  margin-top: 99%;
+  padding-top: 40px;
+  position: absolute;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  margin-left: 230px;
+  z-index: 9999;
+}
+
+.fullName {
+  margin-top: 75px;
+  font-family: 'Oswald', sans-serif;
 }

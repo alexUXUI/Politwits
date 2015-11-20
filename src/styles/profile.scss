@@ -8,7 +8,7 @@
 .polNombre {
   color: black;
   font-size: 1em;
-  font-family: "Verdana";
+  font-family: 'Oswald', sans-serif;
 }
 .profHead {
   height: 350px;
@@ -29,7 +29,7 @@
   width: 300px;
 }
 .profHead .homeLink {
-  font-family: "Verdana";
+  font-family: 'Oswald', sans-serif;
   font-size: 3em;
   color: tomato;
   background-color: #a7a7a7;
@@ -47,8 +47,8 @@
 }
 .tweetMedia {
   flex-direction: row;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   background-color: #ccc;
   margin:10px;
 }
@@ -66,21 +66,23 @@
   border-style: solid;
 }
 .twitDesc {
-  font-family: "Verdana";
+  font-family: 'Oswald', sans-serif;
   color: #fff;
-  font-size: 1.5em;
-  padding-top: 200px;
+  font-size: 2em;
+  padding-top: 150px;
   margin-left: 26%;
-  width: 800px;
-  line-height: 1.5em;
+  width: 700px;
+  line-height: 1.2em;
   font-weight: regular;
+  font-weight: 300;
+  letter-spacing: 3px;
 }
 .timeline {
   width: 65%;
   background-color: #fefefe;
   margin-right: 5%;
   display: flex;
-  margin-left: 25%;
+  margin-left: 22%;
   height: 2000px;
 }
 .results {
@@ -101,8 +103,9 @@
 }
 
 .timeLineHone {
-  margin-left: 45%;
-  font-family: "Verdana";
+  margin-left: 50%;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
   font-size: 1.5em;
   color: #a7a7a7;
 }
@@ -119,19 +122,19 @@ hr {
 }
 
 .tweet {
-  font-family: "Helvetica";
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.3em;
 }
 
 .voteUp {
-  font-family: "Helvetica";
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.3em;
 }
 
 .results h3 {
-  
+
 }
 
-.votes h3 {
-
+.YN {
+font-family: 'Oswald', sans-serif;
 }

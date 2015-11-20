@@ -8,8 +8,10 @@ var voterId = populateInfo.votes;
 var refreshTweets = localStorage.getItem('twitObj');
 /////
 $(document).ready(function(){
-  var polHeader = document.querySelector('#polName');
-  polHeader.innerHTML = populateInfo.nombre;
+  // var link = document.querySelector('.link');
+  // link.innerHTML = populateInfo.link;
+  var fullName = document.querySelector('.fullName');
+  fullName.innerHTML = populateInfo.nombre;
   $(".heroImg").attr("src",'https://theunitedstates.io/images/congress/450x550/' + pageProfile + '.jpg');
   getTweets();
   console.log('conected');
@@ -31,8 +33,8 @@ function voteHistory(){
              var tally = data.objects[i].vote.result;
              $('.voteHist').append(
               "<div class='voteUp'>" +
-              "<h3>" + yeaNay + "</h3>" + "<p>" +
-              chamber + question + required +  tally + "</p>" +
+              "<h3 class='YN'>" + yeaNay + "</h3>" + "<p>" +
+              "<p>" + question + "</p><p>" + tally + "</p>" +
               "</div>"
              )
            }
