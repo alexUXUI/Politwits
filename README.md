@@ -15,8 +15,6 @@ See the Twitter timeline and voting history of US Congressional members.
 2. Jquery
 3. SCSS
 ```
-####Check it out Live:
-https://blistering-heat-2054.firebaseapp.com/
 
 #####Demo:
 https://s3-us-west-2.amazonaws.com/politwits/Politwits_Product_Demo.mov
